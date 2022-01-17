@@ -1,18 +1,25 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <BaseTextbox placeName="名前" />
+    <BaseCard
+      imgPath="/holomythmini.jpg"
+      cardDiscription="ホロMyth壁紙"
+      urlPath="https://hololive.hololivepro.com/"
+      cardWidth="300px"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import BaseTextbox from '@/components/baseComponents/BaseTextbox.vue';
+import BaseCard from '@/components/baseComponents/BaseCard.vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
-    HelloWorld,
+    BaseTextbox,
+    BaseCard
   },
 });
 </script>
